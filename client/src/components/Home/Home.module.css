@@ -1,0 +1,333 @@
+:root {
+    --main-turcoise-color: #00a5b4;
+    --secondary-turcoise-color: #008190;
+    --dark-grey: #4d4f53;
+    --medium-grey: #5e6163;
+    --box-shadow: 12px 18px 24px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+/* Navigation */
+.navigation {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+.headerLogo {
+    width: 20%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-grey)
+}
+
+.miniform {
+    position: relative;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.miniform__icon {
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    color: var(--secondary-turcoise-color);
+}
+
+.miniform__input {
+    height: 2rem;
+    width: 100%;
+    color: var(--medium-grey)
+}
+
+.miniform__btn {
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 2rem;
+    color: var(--dark-grey);
+    justify-content: center;
+}
+
+.menu {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    margin: 2rem;
+    color: var(--dark-grey);
+}
+
+.items__elem {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Main Banner */
+.banner {
+    position: relative;
+    height: 400px;
+    margin: 2rem auto;
+}
+
+.banner::after {
+    content: "";
+    background-image: url(https://gymbeam.com/media/wysiwyg/COM_Pink_Beauty_BP_slider_desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.banner__over {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner__moto {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 2rem;
+}
+
+.banner__heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    inline-size: 300px;
+    overflow-wrap: break-word;
+    font-style: italic;
+    color: var(--main-turcoise-color);
+    margin: 4rem auto;
+}
+
+.banner__btn {
+    background-color: var(--main-turcoise-color);
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.most-popular {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 2rem 0;
+}
+
+.most-popular__heading {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.most-popular__wrapper { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.most-popular__img {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-image: url(https://s1.thcdn.com/productimg/1600/1600/10530472-1194851088586112.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.most-popular__buy {
+    position: absolute;
+    bottom: 0rem;
+    right:1.5rem;
+    background-color: white;
+    opacity: 0.5;
+    padding: 0.5rem;
+}
+
+.most-popular__title {
+    font-size: 1rem;
+    margin: 1rem;
+    color: var(--dark-grey);
+}
+
+.most-popular__rating {
+    display: flex;
+    font-size: 1rem;
+    color: var(--secondary-turcoise-color);
+    margin: 1rem;
+}
+
+.most-popular__price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.most-popular__btn {
+    font-size: 1rem;
+    background-color: var(--secondary-turcoise-color);
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.blog {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.blog__article {
+    width: 20%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.blog__title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem;
+}
+
+.blog__description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    inline-size: 300px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.footer__subscribe {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--dark-grey);
+    color: white;
+    padding: 2rem;
+}
+
+.footer__subscribe__register {
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+.footer__heading {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.footer__btn {
+    font-size: 1rem;
+    background-color: var(--secondary-turcoise-color);
+    color: white;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.footer-socials {
+    width: 50%;
+}
+
+.footer__icon {
+    font-size: 3rem;
+}
+
+.footer__main {
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: var(--medium-grey);
+    padding: 2rem;
+}
+
+.footer__divider {
+    position: absolute;
+    top: 2rem;
+    background-color: white;
+    width: 70%;
+    height: 2px;
+}
+
+.footer__main__help {
+    width: 50%;
+}
+
+.footer__main__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.footer__help__categories {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer__main__list__text {
+    font-size: 1rem;
+    color: white;
+}
+
+.footer__main__products {
+    width: 50%;
+}
+
+.footer__main__products__item {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 1rem;
+}
