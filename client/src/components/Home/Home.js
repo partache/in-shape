@@ -1,4 +1,3 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState} from "react";
 import MostPopularItem from '../MostPopularItem/MostPopularItem';
 import styles from './Home.module.css';

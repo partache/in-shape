@@ -1,12 +1,14 @@
+import {Link} from 'react-router-dom';
 import styles from './ProfileMenu.module.css'
 
 const ProfileMenu = () => {
     return (
-        <ul className={styles["profile-menu"]}>
-            <li className={styles["profile-menu__item"]}>Login</li>
-            <li className={styles["profile-menu__item"]}>Register</li>
-            <li className={styles["profile-menu__item"]}>My items</li>
-        </ul>
+        <nav className={styles["profile-menu"]}>
+            <Link className={styles["profile-menu__item"]} to="/login">Login</Link>
+            <Link className={styles["profile-menu__item"]} to="/register">Register</Link>
+            <Link className={styles["profile-menu__item"]} to="/logout">Logout</Link>
+            <Link className={styles["profile-menu__item"]} to="/my-items">My items</Link>
+        </nav>
     );
 }
 
