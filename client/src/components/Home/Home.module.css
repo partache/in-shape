@@ -55,6 +55,18 @@
     margin-top: 1rem;
 }
 
+.no-articles{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-articles-text{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .blog {
     width: 100%;
     display: flex;
