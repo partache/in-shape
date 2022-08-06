@@ -1,0 +1,63 @@
+/* Navigation */
+.navigation {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+.headerLogo {
+    width: 20%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+
+.miniform {
+    position: relative;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.miniform__icon {
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    color: var(--secondary-turcoise-color);
+}
+
+.miniform__input {
+    height: 2rem;
+    width: 100%;
+    color: var(--medium-grey)
+}
+
+.miniform__btn {
+    width: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 2rem;
+    color: var(--dark-grey);
+    justify-content: center;
+}
+
+.menu {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    margin: 2rem;
+    color: var(--dark-grey);
+}
+
+.items__elem {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}

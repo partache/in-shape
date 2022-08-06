@@ -1,0 +1,74 @@
+
+.most-popular {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 2rem 0;
+}
+
+.most-popular__heading {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.most-popular__wrapper { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.most-popular__img {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-image: url(https://s1.thcdn.com/productimg/1600/1600/10530472-1194851088586112.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.most-popular__buy {
+    position: absolute;
+    bottom: 0rem;
+    right:1.5rem;
+    background-color: white;
+    opacity: 0.5;
+    padding: 0.5rem;
+}
+
+.most-popular__title {
+    font-size: 1rem;
+    margin: 1rem;
+    color: var(--dark-grey);
+}
+
+.most-popular__rating {
+    display: flex;
+    font-size: 1rem;
+    color: var(--secondary-turcoise-color);
+    margin: 1rem;
+}
+
+.most-popular__price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.most-popular__btn {
+    font-size: 1rem;
+    background-color: var(--secondary-turcoise-color);
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+}

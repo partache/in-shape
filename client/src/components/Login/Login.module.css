@@ -1,0 +1,44 @@
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-grey);
+    margin: 2rem;
+}
+
+.tile{
+padding: 1rem;
+box-shadow: 5px 5px 15px 5px var(--dark-grey);
+width: 30%;
+}
+
+.tile__action{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.tile__action__tile{   
+text-decoration-line: underline;
+text-decoration-thickness: 3px;
+text-decoration-color: var( --main-turcoise-color);
+}
+
+.title{
+    font-size: 2rem;
+    color: var(--dark-grey);
+    margin-bottom: 1rem;
+}
+
+.form{
+    width: 100%;
+}
+
+.form__input{
+    border: 1rem solid var(--dark-grey);
+    margin: 1rem 0;
+}
+
+.form__btn{
+    background-color: var(--main-turcoise-color);
+    margin: 2rem 0;
+}

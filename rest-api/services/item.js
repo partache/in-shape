@@ -4,6 +4,15 @@ async function getAll() {
     return Item.find({});
 }
 
+async function getmostPopular(category) {
+
+    const latest3 = await Item.find({ category: { $in: [category]}}).populate('reviews')
+        .sort({ "reviews.rating": -1 })
+        .limit(3)
+
+    return latest3;
+}
+
 async function create(item) {
     const result = new Item(item);
     await result.save();
@@ -53,5 +62,6 @@ module.exports = {
     getById,
     update,
     deleteById,
-    searchItem
+    searchItem,
+    getmostPopular,
 };

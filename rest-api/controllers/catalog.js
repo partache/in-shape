@@ -11,6 +11,19 @@ router.get('/', async (req, res) => {
     res.json(data);
 });
 
+router.get('/popular/:category', async (req, res) => {
+    const category = req.params.id;
+    
+    try {
+        const latest = await api.getmostPopular(category);
+        res.status(200).json(latest);
+    } catch (err) {
+        console.error(err);
+        const error = mapErrors(err);
+        res.status(400).json({ message: error });
+    }
+});
+
 router.post('/', isAuth(), async (req, res) => {
     const item = {
         category: req.body.category,

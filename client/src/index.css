@@ -1,4 +1,10 @@
-
+:root {
+  --main-turcoise-color: #00a5b4;
+  --secondary-turcoise-color: #008190;
+  --dark-grey: #4d4f53;
+  --medium-grey: #5e6163;
+  --box-shadow: 12px 18px 24px 0px rgba(0, 0, 0, 0.75);
+}
 
 body {
   margin: 0;
