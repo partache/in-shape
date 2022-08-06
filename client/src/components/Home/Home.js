@@ -13,14 +13,14 @@ import * as itemService from '../../services/ProductService';
         .then(result => {
             setFood(result);
         })
-    });
+    }, []);
 
     useEffect(() => {
         itemService.getPopularItems('clothing')
         .then(result => {
             setClothing(result);
         })
-    });
+    }, []);
 
     return (
         <main className={styles.home}>
@@ -33,7 +33,7 @@ import * as itemService from '../../services/ProductService';
                 </div>
             </section>
         	{ food.length > 0
-                    ? food.map( x => <MostPopularItem item={x}/>)
+                    ? food.map( x => <MostPopularItem key={x._id} item={x}/>)
                     :   <div className={styles['no-articles']}>
                         <p className={styles['no-articles-text']}>No foods yet</p>
                         </div>

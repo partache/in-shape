@@ -1,0 +1,14 @@
+.profile-menu{
+    width: 100px;
+    position: absolute;
+    padding: 1rem;
+    background-color: var(--dark-grey);
+    top: calc(100% + .25rem);
+}
+
+.profile-menu__item{
+    font-size: 1rem;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+}

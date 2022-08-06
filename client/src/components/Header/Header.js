@@ -1,9 +1,22 @@
 import styles from './Header.module.css';
+import ProfileMenu from './ProfileMenu';
+import { useState, useEffect} from "react";
 
 const Header = () => {
+    const [isProfleMenuShown, setIsProfileMenuShown] = useState(false);
+
+    const showProfileMenu = (event, boolean) => {
+        console.log(event.target);
+        setIsProfileMenuShown(boolean);
+    }
+
+    useEffect( () => {
+   
+    }, [isProfleMenuShown]);
+
     return (
         <header>
-        <nav className={styles.navigation}>
+        <nav className={styles.navigation}  >
             <span className={styles.headerLogo}>
                 <p>InShape</p>
             </span>
@@ -15,9 +28,10 @@ const Header = () => {
                 <input className={styles["miniform__input"]}>
                 </input>
             </form>
-            <button className={styles["miniform__btn"]}>
+            <button className={styles["miniform__btn"]} onClick={(event) => showProfileMenu(event, true)} onBlur={(event) => showProfileMenu(event, false)}>
                 {/* <FontAwesomeIcon icon="fa-solid fa-user" /> */}
-                <i className="fa-solid fa-user"></i>
+                <i className="fa-solid fa-user" ></i>
+                {isProfleMenuShown && <ProfileMenu/>}
             </button>
             <button className={styles["miniform__btn"]}>
                 {/* <FontAwesomeIcon icon="fa-solid fa-basket-shopping" /> */}
