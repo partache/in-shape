@@ -1,0 +1,39 @@
+.auth{
+display: flex;
+justify-content: center;
+margin: 8rem 0;
+}
+
+.tile{
+display: flex;
+justify-content: center;
+align-content: center;
+flex-direction: column;
+padding: 2rem;
+box-shadow: 5px 5px 15px 5px var(--dark-grey);
+width: 30%;
+}
+
+.tile__action{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.tile__action__title{   
+text-decoration: underline solid var( --main-turcoise-color) 3px;
+text-underline-offset: 0.5rem;
+color: lightslategray;
+}
+
+.tile__action__title__active {
+    color: black;
+    text-decoration: "none";
+}
+
+.tile__action__title__inactive{
+    color: lightslategray;
+    text-decoration: "none";
+}
