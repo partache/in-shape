@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import AuthForm from './AuthForm';
 
-export const AuthPage = ({
+const AuthPage = ({
     authAction
 }) => {
 
@@ -39,3 +39,5 @@ export const AuthPage = ({
         </section>
     );
 }
+
+export default AuthPage;

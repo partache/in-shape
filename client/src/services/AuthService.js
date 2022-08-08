@@ -1,5 +1,33 @@
+import * as request  from './requester';
+// import { setUserData, clearUserData } from './util';
+
 const baseUrl = 'http://localhost:3030';
 
-export const login = () => {
-return fetch(`${baseUrl}/users/login`);
+export const login = (data) => {
+    const result = request.post(`${baseUrl}/users/login`, data);
+    // const userData = {
+    //     email: result.email,
+    //     id: result._id,
+    //     token:  result.accessToken
+    // };
+
+    // setUserData(userData);
+    return result;
+}
+
+export const register = (data) => {
+    const result = request.post(`${baseUrl}/users/register`, data);
+    // const userData = {
+    //     email: result.email,
+    //     id: result._id,
+    //     token:  result.accessToken
+    // };
+
+    // setUserData(userData);
+    return result;
+}
+
+export const logout = (accessToken) => {
+    request.get(`${baseUrl}/users/logout`);
+    // localStorage.clear();
 }
