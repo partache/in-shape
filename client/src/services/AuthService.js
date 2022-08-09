@@ -27,7 +27,8 @@ export const register = (data) => {
     return result;
 }
 
-export const logout = (accessToken) => {
-    request.get(`${baseUrl}/users/logout`);
+export const logout = () => {
+    const response = request.get(`${baseUrl}/users/logout`);
+    return response;
     // localStorage.clear();
 }

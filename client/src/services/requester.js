@@ -7,6 +7,9 @@ export const request = async (method, url, data) => {
             headers: {}
         };
 
+        // const logoutString= url.split('/')
+        // .find(x => x==='logout');
+
         if (data !== undefined) {
             options = {
                 ...options,
@@ -17,27 +20,34 @@ export const request = async (method, url, data) => {
             };
         }
 
-
         // const userData = getUserData();
         // if (authData) {
         //     options.headers['x-authorization'] = userData.token;
         // }
-        const userData = localStorage.getItem('userData');
-        if (userData) {
+        const userData = JSON.parse(localStorage.getItem('userData'));
+        if (userData && userData !== "{}") {
             options.headers['x-authorization'] = userData.accessToken;
         }
 
-        options.headers['x-authorization'] = userData.accessToken;
+        // if(logoutString){
+        //     options.headers['x-authorization'] = userData.accessToken;
+        // }
+
+        // options.headers['x-authorization'] = userData.accessToken;
 
         const response = await fetch(url, options);
 
-        if (response.status === '204') {
-            return response;
+        if (response.status === 204) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(response);
+                },100 );
+            });
+        } else {
+            const result = await response.json();
+            return result;
         }
 
-        const result = await response.json();
-
-        return result;
     } catch (error) {
         console.log(error);
     }

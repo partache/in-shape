@@ -9,6 +9,7 @@ module.exports = () => (req, res, next) => {
             req.user = userData;
         }
         next();
+
     } catch (err) {
         res.status(498).json({ message: 'Invalid access token. Please sign in' });
     }

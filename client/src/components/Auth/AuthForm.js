@@ -25,9 +25,16 @@ const AuthForm = ({
     const submitHandler = (e) => {
         e.preventDefault();
         console.log(values);
+
+        if(authAction === 'register' && values.password !== values.rePass){
+            return;
+        }
+
+        const { email, password } = values;
+        const withoutRePass = { email, password };
        
         if (authAction === 'login') {
-            login(values)
+            login(withoutRePass)
                 .then(authData => {
                     console.log(authData);
                     userLogin(authData);
@@ -37,12 +44,6 @@ const AuthForm = ({
                     navigate('/404');
                 });
         } else if (authAction === 'register') {
-
-            if(values.password !== values.rePass){
-                return;
-            }
-            const { email, password } = values;
-            const withoutRePass = { email, password };
             
             register(withoutRePass)
                 .then(authData => {

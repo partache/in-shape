@@ -5,7 +5,7 @@ import { logout } from "../../services/AuthService";
 
 const Logout = () => {
     const navigate = useNavigate();
-    const { user, userLogout } = useContext(UserContext);
+    const {user, userLogout } = useContext(UserContext);
 
     useEffect(() => {
         logout(user.accessToken)
@@ -16,7 +16,7 @@ const Logout = () => {
             .catch(() => {
                 navigate('/');
             });
-    }, []);
+    });
 
     return null;
 };
