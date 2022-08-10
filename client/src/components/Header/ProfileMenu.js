@@ -15,6 +15,7 @@ const ProfileMenu = () => {
                 <>
                     <Link className={styles["profile-menu__item"]} to="/logout">Logout</Link>
                     <Link className={styles["profile-menu__item"]} to="/my-items">My items</Link>
+                    <Link className={styles["profile-menu__item"]} to="/catalog/create">Create</Link>
                 </>
                 :
                 <>

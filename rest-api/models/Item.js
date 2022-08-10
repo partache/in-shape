@@ -7,12 +7,12 @@ const schema = new Schema({
     subCategory: {
         type: String,
         required: true,
-        minlength: [4, 'Title must be at least 3 characters long']
+        minlength: [3, 'Subcategory must be at least 3 characters long']
     },
     size: {
         type: String,
         required: true,
-        minlength: [4, 'Title must be at least 1 characters long']
+        minlength: [1, 'Size must be at least 1 characters long']
     },
     description: { type: String, required: true, minlength: [10, 'Description must be at least 10 characters long'] },
     price: { type: Number, required: true },

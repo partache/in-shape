@@ -1,6 +1,7 @@
 import styles from './Header.module.css';
 import ProfileMenu from './ProfileMenu';
 import React, { useState, useEffect} from "react";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isProfleMenuShown, setIsProfileMenuShown] = useState(false);
@@ -25,7 +26,8 @@ const Header = () => {
         <header onMouseDown={handleClickOutside}>
         <nav className={styles.navigation}>
             <span className={styles.headerLogo}>
-                <p>InShape</p>
+            <Link to="/logout" className={styles['headerLogo__']}>InShape</Link>
+                {/* <p>InShape</p> */}
             </span>
             <form className={styles.miniform}>
                 <button className={styles["miniform__icon"]}>

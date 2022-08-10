@@ -15,6 +15,11 @@
     color: var(--dark-grey);
 }
 
+.headerLogo__{
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+
 .miniform {
     position: relative;
     width: 40%;

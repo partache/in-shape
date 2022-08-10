@@ -13,6 +13,11 @@ async function getmostPopular(category) {
     return latest3;
 }
 
+async function getMyItems(ownerId){
+    const myPets = await Item.find({ owner: ownerId});
+    return myPets;
+}
+
 async function create(item) {
     const result = new Item(item);
     await result.save();
@@ -64,4 +69,5 @@ module.exports = {
     deleteById,
     searchItem,
     getmostPopular,
+    getMyItems
 };

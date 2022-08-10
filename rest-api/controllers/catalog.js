@@ -6,8 +6,12 @@ const preload = require('../middlewares/preload');
 
 
 router.get('/', async (req, res) => {
-    console.log(req.user);
     const data = await api.getAll();
+    res.json(data);
+});
+
+router.get('/my-items', isAuth(), async (req, res) => {
+    const data = await api.getMyItems(req.user._id);
     res.json(data);
 });
 
