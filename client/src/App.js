@@ -12,7 +12,10 @@ import Catalog from './components/Catalog/Catalog';
 import * as itemService from './services/ProductService';
 import { UserContext } from './contexts/userContext';
 import { ItemContext } from './contexts/itemContext';
+// import { StartRatingContext } from './contexts/starRatingContext';
+// import { ReviewsContext } from './contexts/reviewsContext';
 import { useLocalStorage } from './hooks/useLocalStorage'
+import ItemDetails from './components/ItemDetails/ItemDetails';
 
 function App() {
   let navigate = useNavigate();
@@ -27,6 +30,11 @@ function App() {
     setUser("{}");
   }
 
+  // const [reviews, setReviews] = useState(0);
+  // const addReview = (reviewData) => {
+  //   setReviews(reviewData);
+  // }
+  
   const addNewItem = (itemData) => {
 
       setItems(state => [
@@ -42,7 +50,9 @@ function App() {
     .then(result => {
       setItems(result);
     });
-  }, [])
+  }, []);
+
+ 
 
 
   return (
@@ -56,7 +66,10 @@ function App() {
             <Route path="/register" element={<AuthPage authAction={'register'} />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/catalog/create" element={<CreateItem/>} />
+            {/* <ReviewsContext.Provider value={{reviews, addReview}}> */}
             <Route path="/catalog" element={<Catalog/>}/>
+            <Route path="/catalog/:itemId" element={<ItemDetails/>}/>
+            {/* </ReviewsContext.Provider> */}
           </Routes>
         </ItemContext.Provider>
         <Footer />

@@ -27,7 +27,7 @@ async function start() {
     app.use(cors());
     app.use(auth());
     app.use('/items', catalogController);
-    app.use('/item/:itemId/reviews', reviewsController);
+    app.use('/items/:itemId/reviews', reviewsController);
     app.use('/users', usersController);
 
     app.get('/', (req, res) => res.json({ message: 'REST service operational'}));

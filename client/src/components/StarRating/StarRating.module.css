@@ -1,0 +1,19 @@
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    color: var(--secondary-turcoise-color)
+  }
+  .off {
+    color: #ccc;
+  }
+
+  .rating {
+    display: flex;
+    font-size: 1rem;
+    color: var(--secondary-turcoise-color);
+    margin: 1rem;
+}

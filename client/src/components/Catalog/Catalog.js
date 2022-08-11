@@ -9,7 +9,7 @@ const Catalog = () => {
     return (
         <>
         { items.length > 0
-            ? items.map( x => <CatalogItem key={x._id} item={x}/> )
+            ? items.map( item => <CatalogItem key={item._id} item={item}/> )
             :  <div className={styles['no-articles']}>
                 <p className={styles['no-articles-text']}>No items yet!</p>
                 </div>
@@ -17,5 +17,6 @@ const Catalog = () => {
         </>
     );
 }
+
 
 export default Catalog;

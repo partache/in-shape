@@ -6,7 +6,7 @@ const preload = require('../middlewares/preload');
 
 router.post('/', isAuth(), preload(), async (req, res) => {
     const item = res.locals.item;
-//'/item/:itemId/reviews', '/item/:itemId/reviews/:reviewId'
+//'/items/:itemId/reviews', '/items/:itemId/reviews/:reviewId'
     const review = {
         rating: req.body.rating,
         date: req.body.date,
@@ -25,7 +25,7 @@ router.post('/', isAuth(), preload(), async (req, res) => {
     }
 });
 
-router.get('/:reviewId', preload(), async (req, res) => {
+router.get('/', preload(), async (req, res) => {
     const item = res.locals.item;
     const review = await api.getAllReviewsByItemId(item._id);
     res.json(review);

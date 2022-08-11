@@ -1,0 +1,32 @@
+.review__devider{
+    height: 2px;
+    width: 300px;
+    background-color: var(--dark-grey);
+}
+
+.review__by{
+    font-size: 3rem;
+    margin: 1rem;
+    color: var(--dark-grey);
+}
+
+.review__description{ 
+        font-size: 1rem;
+        margin: 1rem;
+        color: var(--dark-grey);
+}
+
+.review__rating{
+    display: flex;
+    font-size: 1rem;
+    color: var(--secondary-turcoise-color);
+    margin: 1rem;
+}
+
+.item__rating__star__not_rated{
+    color: grey;
+}
+
+.item__rating__star{
+    color: var(--secondary-turcoise-color)
+}
